@@ -8,9 +8,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://livote-client.vercel.app",
-      "https://livote-server.vercel.app",
-      "https://livote-server.onrender.com",
+      "https://poll-client.vercel.app/",
     ],
     methods: ["GET", "POST"],
   })
