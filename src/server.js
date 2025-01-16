@@ -10,12 +10,7 @@ import { Poll } from "./models/poll.model.js";
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: [
-      "https://pollbackend-4rla.onrender.com",
-      "http://localhost:5173",
-      "https://poll-client.vercel.app/",
-
-    ],
+    origin: 'https://poll-client.vercel.app',
     methods: ["GET", "POST"],
   },
 });
