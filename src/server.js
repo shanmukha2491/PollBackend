@@ -8,7 +8,14 @@ import { Poll } from "./models/poll.model.js";
 
 
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server,{
+  cors: {
+    origin: "https://poll-client.vercel.app", // Your frontend URL
+    methods: ["GET", "POST"], // Allowed HTTP methods
+    allowedHeaders: ["Content-Type"], // Allowed headers
+    credentials: true, // Allow cookies
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 
