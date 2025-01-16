@@ -4,7 +4,7 @@ import indexRouter from "./routes/index.route.js";
 
 const app = express();
 
-const cors = require('cors');
+// const cors = require('cors');
 
 // Allow specific origin
 app.use(cors({
